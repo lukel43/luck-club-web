@@ -1,0 +1,23 @@
+{
+  "name": "luck-club-web",
+  "version": "1.0.0",
+  "description": "This repository contains the web app for the Solidity luck club.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukel43/luck-club-web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lukel43/luck-club-web/issues"
+  },
+  "homepage": "https://github.com/lukel43/luck-club-web#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}
