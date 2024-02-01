@@ -4,7 +4,8 @@
   "description": "This repository contains the web app for the Solidity luck club.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "npx @11ty/eleventy --serve --input=src --output=dist --formats=html,njk,gif,png,svg,jpg,jpeg,webp,css,js,md",
+    "build": "npx @11ty/eleventy --input=src --output=dist --formats=html,njk,gif,png,svg,jpg,jpeg,webp,css,js,md"
   },
   "repository": {
     "type": "git",
