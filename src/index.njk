@@ -1,9 +1,12 @@
 ---
 layout: layouts/base.njk
-title: Learn Eleventy
+title: Luck Club
 ---
-<div id="site">
-  <img src="img/logo.png" class="logo" alt="Eleventy logo" />
-  <p>Edit <code>src/index.njk</code> and save to reload.</p>
-  <a href="https://www.11ty.dev/" target="_blank" rel="noopener noreferrer">{{title}}</a>
-</div>
+
+{% block content %}
+<h1>Welcome to the Luck Club</h1>
+<button id="connectWallet">Connect Wallet</button>
+<button id="createClub">Create New Club</button>
+<div id="clubsList"></div>
+<script src="/js/web3.js"></script>
+{% endblock %}
