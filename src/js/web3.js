@@ -238,21 +238,36 @@ const factoryAbi = [
       "constant": true
     }
   ];
-const factoryAddress = /* Factory contract address */;
+const factoryAddress = '0x1f2bd590bc143991a84F9f1AD6b73d6B27E0EB76';
 
 // Web3 instance
-const web3 = new Web3(window.ethereum);
+const webInstance = new Web3(window.ethereum);
 
 // Contract instances
-const factoryContract = new web3.eth.Contract(factoryAbi, factoryAddress);
+const factoryContract = new webInstance.eth.Contract(factoryAbi, factoryAddress);
 
 // Functions to interact with contracts
 async function createClub() {
-    // Implement the createClub function
+  try {
+      const accounts = await webInstance.eth.getAccounts();
+      await factoryContract.methods.makeClub().send({ from: accounts[0] });
+      console.log('Club created successfully.');
+  } catch (error) {
+      console.error('Error creating club:', error);
+  }
 }
 
+
 async function getClubs() {
-    // Implement the getClubs function
+  try {
+      const clubs = await factoryContract.methods.viewClubs().call();
+      // Here you can process the list of clubs, for example, display them in the frontend
+      console.log('Clubs:', clubs);
+  } catch (error) {
+      console.error('Error fetching clubs:', error);
+  }
 }
 
 document.getElementById('createClub').addEventListener('click', createClub);
+document.getElementById('viewClubs').addEventListener('click', getClubs);
+

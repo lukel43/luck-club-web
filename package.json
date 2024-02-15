@@ -20,5 +20,8 @@
   "homepage": "https://github.com/lukel43/luck-club-web#readme",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1"
+  },
+  "dependencies": {
+    "web3": "^4.5.0"
   }
 }
